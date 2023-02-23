@@ -14,5 +14,8 @@
     <input type="radio" value="{{answer}}" name="answer">
     {%endfor%}
     <button id="name">Submit</button>
+    {% for msg in get_flashed_messages() %}
+    <p>{{msg}}</p>
+    {% endfor %}
 </form>
 {% endblock %} 
