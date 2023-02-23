@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Welcome to Survey{% endblock %}
+
+
+
+
+{% block body %}
+<h1>Question {{question_number+1}}:</h1>
+<p> {{question}}</p>
+<form method="post" action="/answers/{{question_number}}">
+    {%for answer in answers%}
+    <label>{{answer}}</label>
+    <input type="radio" value="{{answer}}" name="answer">
+    {%endfor%}
+    <button id="name">Submit</button>
+</form>
+{% endblock %} 

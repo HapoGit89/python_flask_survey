@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Welcome to Survey{% endblock %}
+
+
+
+
+{% block body %}
+<h1>{{survey_title}}</h1>
+<p> {{instructions}}</p>
+<button onclick = "window.location='/questions/0'">Start Survey</button>
+{% endblock %} 
