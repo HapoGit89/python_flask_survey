@@ -8,5 +8,8 @@
 {% block body %}
 <h1>{{survey_title}}</h1>
 <p> {{instructions}}</p>
-<button onclick = "window.location='/questions/0'">Start Survey</button>
+<form action = "/sessionstart" method="post">
+    <button>Start Survey</button>
+</form>
+
 {% endblock %} 
